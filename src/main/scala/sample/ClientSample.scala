@@ -18,5 +18,7 @@ object ClientSample {
     val remoteActor = system.actorFor(server)
 
     remoteActor ! "actorFor"
+
+    system.shutdown()
   }
 }
