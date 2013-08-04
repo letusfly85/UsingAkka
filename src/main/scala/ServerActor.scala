@@ -1,5 +1,3 @@
-package scala
-
 import akka.actor.{Props, ActorSystem, Actor}
 
 class ServerActor extends Actor {
