@@ -1,4 +1,4 @@
 libraryDependencies ++= Seq(
-  "com.typesafe.akka" % "akka-actor_2.10" % "2.1.0",
-  "com.typesafe.akka" % "akka-remote_2.10" % "2.1.0"
+  "com.typesafe.akka" % "akka-actor" % "2.0.1",
+  "com.typesafe.akka" % "akka-remote" % "2.0.1"
 )
