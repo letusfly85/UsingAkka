@@ -9,11 +9,13 @@ object ClientSample {
     val properties: Properties = new Properties()
     properties.load(getClass().getResourceAsStream("/.properties"))
 
+    val host = properties.getProperty("HOST")
+    val port = properties.getProperty("PORT")
+    val server =  "akka://RemoteActor@" + host + ":" + port + "/user/serverActor"
+
     val system = ActorSystem()
 
-    val remoteActor = system.actorFor(
-    "akka://RemoteActor@" + properties.getProperty("HOST") + ":" + properties.getProperty("PORT") + "/sample/serverActor"
-    )
+    val remoteActor = system.actorFor(server)
 
     remoteActor ! "actorFor"
   }
