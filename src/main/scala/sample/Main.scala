@@ -1,3 +1,5 @@
+package sample
+
 import akka.actor.{Props, ActorSystem}
 import akka.pattern.ask
 import akka.util.duration._

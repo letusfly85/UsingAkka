@@ -1,3 +1,5 @@
+package sample
+
 import akka.actor._
 
 class HelloActor extends Actor {
