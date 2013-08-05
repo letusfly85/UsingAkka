@@ -5,7 +5,14 @@ import akka.actor.{Props, ActorSystem, Actor}
 class ServerActor extends Actor {
 
   def receive = {
-    case x => println("execute remote actor: " + x)
+    case x: String =>
+      println("execute remote actor: " + x)
+
+      val tweet: MyTweet = new MyTweet
+      tweet.myTweet(x)
+
+    case y =>
+      println(y)
   }
 }
 
