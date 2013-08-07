@@ -17,7 +17,8 @@ object ClientSample {
 
     val remoteActor = system.actorFor(server)
 
-    remoteActor ! "actorFor"
+    val msg = "頑張らないo(▽≦*o))) 効率的にやる（´＿｀＼）"
+    remoteActor ! msg
 
     system.shutdown()
   }
